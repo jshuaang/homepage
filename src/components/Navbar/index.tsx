@@ -2,7 +2,7 @@ import { faArrowRightFromBracket, faGear, faImages } from '@fortawesome/free-sol
 import { signOut } from 'firebase/auth';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import { SpotifyIcon, YoutubeIcon } from '../../assets';
+import { GoogleIcon, SpotifyIcon, YoutubeIcon } from '../../assets';
 import { auth } from '../../config/firebase';
 import Icon from '../Icon';
 import Logo from '../Logo';
@@ -31,14 +31,14 @@ const Navbar = () => {
 
     return (
         <>
-            <div className='flex justify-between'>
+            <div className='flex justify-between h-[15%]'>
                 <div className='flex justify-start space-x-3 py-5 px-5 w-[15%]'>
                     <Logo alt='logo-spotify' linkTo='https://open.spotify.com/playlist/6yUqr5HQG4e1ZCEbL8qT0u?si=28a2e7fce3d24eed' text='Spotify' src={SpotifyIcon} />
                     <Logo alt='logo-youtube' linkTo='https://www.youtube.com/' text='Youtube' src={YoutubeIcon} />
                 </div>
                 <div className='py-5 flex-1'>
                     <form className='flex justify-center' onSubmit={handleSubmit}>
-                        <input value={valueSearch} onChange={handleChange} autoComplete="off" type="text" name="q" placeholder='Type to search...' className='bg-transparent border-b-2 border-b-white outline-none test-[2.25em] text-center w-[50%] py-1' />
+                        <input value={valueSearch} onChange={handleChange} autoComplete="off" type="text" name="q" placeholder='Type to search...' className='bg-transparent border-b-2 border-b-white outline-none text-[1.25em] text-center w-[50%] py-1' />
                     </form>
                 </div>
                 <div className='flex justify-end space-x-1 py-5 px-5 w-[15%]'>

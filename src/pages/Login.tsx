@@ -13,10 +13,12 @@ const Login = () => {
                 const credential = GoogleAuthProvider.credentialFromResult(result);
                 const user = result.user;
                 const token: any = credential?.accessToken;
-                const name: any = user?.displayName
+                const uid: any = user?.uid;
+                const name: any = user?.displayName;
                 if (user && token) {
                     localStorage.setItem('token', token);
-                    localStorage.setItem('name', name)
+                    localStorage.setItem('uid', uid);
+                    localStorage.setItem('name', name);
                     navigate('/');
                 }
             }).catch((error) => {

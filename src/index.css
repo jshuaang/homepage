@@ -8,3 +8,7 @@ body {
     font-family: 'Rubik', sans-serif;
     color: #fff;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
