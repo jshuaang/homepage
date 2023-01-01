@@ -38,7 +38,7 @@ const Navbar = () => {
                 </div>
                 <div className='py-5 flex-1'>
                     <form className='flex justify-center' onSubmit={handleSubmit}>
-                        <input value={valueSearch} onChange={handleChange} autoComplete="off" type="text" name="q" placeholder='Type to search...' className='bg-transparent border-b-2 border-b-white outline-none text-[1.25em] text-center w-[50%] py-1' />
+                        <input value={valueSearch} onChange={handleChange} autoComplete="off" type="text" name="q" placeholder='Type to search...' className='bg-transparent border-b-2 border-b-white outline-none text-[1.25em] text-center w-[50%] py-1 focus:animate-pulse' />
                     </form>
                 </div>
                 <div className='flex justify-end space-x-1 py-5 px-5 w-[15%]'>

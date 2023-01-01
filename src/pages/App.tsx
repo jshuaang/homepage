@@ -23,7 +23,7 @@ function App() {
   const [greeting, setGreeting] = useState<string>()
   const [verse, setVerse] = useState<verseInterface>({ text: '', bookname: '', chapter: '', verse: '' })
 
-  const handleTodo = () => setShowTodo(!showTodo)
+  const handleTodo = () => setTimeout(() => setShowTodo(!showTodo), 500)
 
   const capitalize = (word: string): string => {
     let firstName = word.split(" ")[0]
@@ -67,12 +67,19 @@ function App() {
             <div className='flex flex-col justify-center opacity-0 group-hover/main:opacity-100 transition-all duration-300'>
               <Icon icon={faArrowLeft} text={""} onClick={handleTodo} />
             </div>
-            {!showTodo ?
+            <div className='flex relative w-full justify-center'>
+              <div className={`flex flex-col text-center text-[3rem] justify-center w-[80%] absolute z-30 top-32 duration-300 ${!showTodo ? 'translate-x-0 opacity-100' : 'translate-x-96 opacity-0 scale-0'}`}>
+                <p className='text-[5rem]'>{time}</p>
+                <p>{greeting}, {name ? capitalize(name) : null}</p>
+              </div>
+              <Todo showTodo={showTodo} />
+            </div>
+            {/* {!showTodo ?
               (<div className={`flex flex-col text-center text-[3rem] justify-center w-[80%]`}>
                 <p className='text-[5rem]'>{time}</p>
                 <p>{greeting}, {name ? capitalize(name) : null}</p>
               </div>) :
-              <Todo />}
+              <Todo />} */}
             <div className='flex flex-col justify-center opacity-0 group-hover/main:opacity-100 transition-all duration-300'>
               <Icon icon={faArrowRight} text={""} onClick={handleTodo} />
             </div>
