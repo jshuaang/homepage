@@ -2,7 +2,7 @@ import { faArrowRightFromBracket, faGear, faImages } from '@fortawesome/free-sol
 import { signOut } from 'firebase/auth';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import { GoogleIcon, SpotifyIcon, YoutubeIcon } from '../../assets';
+import { SpotifyIcon, YoutubeIcon } from '../../assets';
 import { auth } from '../../config/firebase';
 import Icon from '../Icon';
 import Logo from '../Logo';
