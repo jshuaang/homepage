@@ -22,8 +22,8 @@ const Login = () => {
                     navigate('/');
                 }
             }).catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
+                // const errorCode = error.code;
+                // const errorMessage = error.message;
             });
     }
 
@@ -36,11 +36,13 @@ const Login = () => {
                 <img src={BackgroundImage} alt='background' className='bg-cover bg-center bg-no-repeat h-screen w-screen' />
             </div>
             <div className='absolute z-10 top-0 left-0 bottom-0 right-0 flex justify-center'>
-                <div className='w-[30%] h-auto border-white border-2 rounded-xl p-2 my-auto flex justify-center hover:bg-slate-100 hover:bg-opacity-10 cursor-pointer space-x-5' onClick={login}>
-                    <div className=''>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt='logo-google' />
+                <div className='w-[27%] px-8 py-4 h-auto bg-white border-white border-2 rounded-full rounded-xl my-auto flex justify-center transition hover:duration-200 hover:bg-slate-100 hover:bg-opacity-10 cursor-pointer space-x-5 shadow-md' onClick={login}>
+                    <div className='w-full flex justify-between items-center gap-8'>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt='logo-google' className="w-16 h-16" />
+                        <div className='w-[100%] text-center'>
+                            <p className="font-bold text-3xl text-[#808080]">Sign in with Google</p>
+                        </div>
                     </div>
-                    <p>Sign in with google</p>
                 </div>
             </div>
         </div>
